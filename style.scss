@@ -1,33 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-&color-main :;
-&color-sub :;
-*{margin: 0;
+$color-main :#252525;
+$color-sub :#284687;
+
+*{
+  margin: 0;
   padding: 0;
   box-sizing: border-box; 
   font-family: 微軟正黑體;
-  color:&color-main;
+  color: $color-main;
 }
+
+.logo {  
+  padding: 20px 0;
+  font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover{  
+      color: $color-sub;
+    }
+  
+}
+
 #navigation {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 20px 0;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 
-    .logo {  
-        font-family: 'Noto Serif TC', serif;
-        font-family: 'Poppins', sans-serif;
-        font-size: 32px;
-        text-decoration: none;
-        transition: 0.3s;
-
-        &:hover{  
-            color: &color-sub;
-        }
-
-    }
+    
 
     .social{
+
         img{
 
              filter: invert(58%) sepia(34%) saturate(5471%) hue-rotate(158deg) brightness(91%) contrast(101%);
