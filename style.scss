@@ -41,6 +41,9 @@ $color-sub: #288787;
   padding: 20px 0;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   align-items: center;
+  position: fixed;
+  width: 100%;
+  background: white;
 
   .social {
     text-align: right;
@@ -48,10 +51,18 @@ $color-sub: #288787;
     img {
       filter: invert(58%) sepia(34%) saturate(5471%) hue-rotate(158deg) brightness(91%) contrast(101%);
       transition: 0.6s;
+      width: 32px;
+      margin-left: 30px;
 
       &:hover {
         filter: invert(10%) sepia(17%) saturate(19%) hue-rotate(323deg) brightness(96%) contrast(89%);
       }
     }
   }
+}
+
+#banner{  
+  width: 100%;
+  height: 100vh;
+  background: #eee;
 }
