@@ -1,7 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
+// 主色與次要色
 $color-main: #252525;
-$color-sub: #288787;
+$color-sub: #6eb3ff;
+$color-bg-gray: #f9f9f9;
+$color-white: #cdcdcd;
+
+// 文字大小：最大
+$font-size-big: 36px;
+// 字體
+$font-family-main: "Bebas Neue", cursive;
+
+// RWD
+$desktop: 1025px;
+$table: 1024px;
+$mobile: 767px;
 
 * {
   margin: 0;
@@ -11,12 +24,48 @@ $color-sub: #288787;
   color: $color-main;
 }
 
+// 導覽列
+#navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 120px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  // 固定：寬度會跑掉
+  position: fixed;
+  width: 100%;
+  background: white;
+
+  // 平板
+  @media screen and (max-width:$table) {
+    // 格限樣版區域: "區域名稱"
+    grid-template-areas: "logo social menu";
+    
+  }
+
+  // 選單
+  #menu {
+    grid-area: menu;
+
+    // 桌電:隱藏
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+    // 平板:顯示
+    @media screen and (max-width: $table) {
+      display: block;
+      margin-left: auto;
+    }
+  }
+}
 .logo {
-  padding: 20px 20px;
-  font-family: "Poppins", sans-serif;
-  font-size: 32px;
+  grid-area: logo;
+  font-family: $font-family-main;
+  font-size: 42px;
   text-decoration: none;
   transition: 0.3s;
+  letter-spacing: 2px;
+  
 
   &:hover {
     color: $color-sub;
@@ -24,45 +73,171 @@ $color-sub: #288787;
 }
 
 .link {
+  text-align: center;
+
   a {
     text-decoration: none;
-    padding: 30px;
+    padding: 30px 30px 30px 40px;
     transition: 0.3s;
+    letter-spacing: 10px;
 
     &:hover {
       color: $color-sub;
     }
   }
+  // 平板:隱藏
+  @media screen and (max-width: $table) {
+    display: none;
+  }
 }
 
-#navigation {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 20px 0;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  align-items: center;
-  position: fixed;
+.social {
+  grid-area: social;
+  text-align: right;
+
+  img {
+    filter: invert(9%) sepia(11%) saturate(6%) hue-rotate(336deg) brightness(100%) contrast(86%);
+    transition: 0.2s;
+    width: 32px;
+    margin-left: 30px;
+
+    &:hover {
+      filter: invert(63%) sepia(8%) saturate(2974%) hue-rotate(177deg) brightness(105%) contrast(102%);
+    }
+  }
+}
+
+// 橫幅
+#banner {
   width: 100%;
-  background: white;
+  height: 100vh;
+  background: #eee;
+}
 
-  .social {
-    text-align: right;
+// 關於我
+#about {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
 
-    img {
-      filter: invert(58%) sepia(34%) saturate(5471%) hue-rotate(158deg) brightness(91%) contrast(101%);
-      transition: 0.6s;
-      width: 32px;
-      margin-left: 30px;
+  h2 {
+    font-size: 420px;
+    font-family: $font-family-main;
+    letter-spacing: 30px;
+    padding-left: 30px;
+    margin-top: 50px;
+  }
 
-      &:hover {
-        filter: invert(10%) sepia(17%) saturate(19%) hue-rotate(323deg) brightness(96%) contrast(89%);
+  p {
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+}
+
+// 標題
+.title {
+  font-size: $font-size-big;
+  padding: 35px;
+  text-align: center;
+}
+
+// 按鈕：盒型
+.button-box {
+  padding: 10px 60px;
+  border: 2px solid $color-main;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    background: $color-main;
+    color: white;
+  }
+}
+// 按鈕外的區塊
+.button-div {
+  text-align: center;
+  margin-top: 50px;
+}
+
+// 作品集
+#works {
+  height: 100vh;
+  background: $color-bg-gray;
+
+  #work-box {
+    width: 1200px;
+    display: grid;
+    margin: 0 auto;
+    // repeat(數量，一格的寬度)
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 340px);
+    // 格線間隙：上下 左右
+    grid-gap: 20px 35px;
+
+    .work-box-small {
+      img {
+        display: block;
+        width: 100%;
+        height: 300px;
+        background: #eee;
+      }
+
+      h2 {
+        text-align: center;
+        // 變形：位移 Y 軸(單位)
+        transform: translateY(-30px);
+      }
+
+      span {
+        display: inline-block;
+        border: 1.5px solid #000;
+        border-radius: 30px;
+        padding: 3px 12px;
+        margin-top: 12px;
+        margin-left: 10px;
+        font-size: 12px;
       }
     }
   }
 }
 
-#banner{  
-  width: 100%;
-  height: 100vh;
-  background: #eee;
+// 頁尾
+footer {
+  background: $color-main;
+  padding: 90px 0;
+  text-align: center;
+
+  .logo {
+    color: $color-white;
+  }
+
+  .link {
+    a {
+      color: $color-white;
+    }
+  }
+
+  .social {
+    text-align: center;
+
+    img {
+      filter: invert(86%) sepia(0%) saturate(0%) hue-rotate(73deg) brightness(98%) contrast(91%);
+      margin: 30px 20px;
+    }
+  }
+
+  #copyright {
+    color: $color-white;
+    font-size: 8px;
+    margin-top: 50px;
+  }
+}
+
+// 小的 LOGO
+.logo-small {
+  color: $color-white;
+  font-family: $font-family-main;
+  letter-spacing: 3px;
+  padding-left: 3px;
+  font-size: 16px;
 }
