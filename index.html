@@ -5,102 +5,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Document</title>
+    <!--  Slick CDN  -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- AOS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <!-- 導覽列 -->
-    <nav id="navigation">
-        <div>
-            <a href="./index.html" class="logo">{KID}</a>
-        </div>
-        <img src="./img/iconfinder_menu-alt_134216.png" alt="選單" id="menu">
-        <div class="link">
-            <a href="">關於我</a>
-            <a href="">作品集</a>
-            <a href="">聯絡我</a>
-        </div>
-        <div class="social">
-            <a href=""><img src="./img/yt-icon.png" alt="YOUTUBE"></a>
-            <a href=""><img src="./img/github-icon.png" alt="Git Hub"></a>
-            <a href=""><img src="./img/fb-icon.png" alt="Facebook"></a>
-            <a href=""><img src="./img/email-icon.png" alt="E-Mail"></a>
-        </div>
-    </nav>
 
-    <!-- 橫幅 -->
-    <section id="banner">
+    <body id="top">
+        <!-- 導覽列 -->
+        <nav id="navigation">
+            <div>
+                <a href="./index.html" class="logo">{KID}</a>
+            </div>
+            <img src="./img/icon-menu.png" alt="選單" id="menu">
+            <div class="link">
+                <a href="">關於我</a>
+                <a href="">作品集</a>
+                <a href="">聯絡我</a>
+            </div>
+            <div class="social">
+                <a href=""><img src="./img/icon-youtube.png" alt="YOUTUBE"></a>
+                <a href=""><img src="./img/icon-github.png" alt="Git Hub"></a>
+                <a href=""><img src="./img/icon-facebook.png" alt="Facebook"></a>
+                <a href=""><img src="./img/icon-email.png" alt="E-Mail"></a>
+            </div>
+        </nav>
 
-    </section>
+        <!-- 橫幅 -->
+        <section id="banner">
+            <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅1&font=noto">
+            <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅2&font=noto">
+            <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅3&font=noto">
+            <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅4&font=noto">
+            <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅5&font=noto">
+            <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅 1&font=noto">
+            <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅 2&font=noto">
+            <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅 3&font=noto">
+            <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅 4&font=noto">
+            <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅 5&font=noto">
+        </section>
 
-    <!-- 關於我 -->
-    <section id="about">
-        <h1 class="title">關於我</h1>
-        <h2>{KID}</h2>
-        <p>嗨，我是一位開發者，主要開發遊戲、網頁，也會創作插畫。 </p>
-        <a href="" class="button-box">關於我</a>
-    </section>
-
-    <!-- 作品集 -->
-    <section id="works">
-        <h1 class="title">作品集</h1>
-        <div id="work-box">
-            <div class="work-box-small">
-                <img src="" alt="">
-                <span>類別</span>
-                <h2>作品名稱</h2>
+        <!-- 關於我 -->
+        <section id="about">
+            <h1 class="title" data-aos="slide-right" data-aos-duration="1000" data-aos-offset="200"
+                data-aos-once="true">關於我
+            </h1>
+            <!-- data-aos 動畫 -->
+            <!-- data-aos-offset 位移：往上為正 -->
+            <!-- data-aos-delay 延遲 -->
+            <!-- data-aos-duration 持續時間：毫秒 0 - 3000 -->
+            <!-- data-aos-easing 緩動 -->
+            <!-- data-aos-mirror 雙向 true 允許雙向 false 不允許 -->
+            <!-- data-aos-once 播放一次 true 一次 false 不限次數 -->
+            <h2 data-aos="flip-right" data-aos-offset="300" data-aos-duration="1500" data-aos-easing="ease-in-out-sine"
+                <h2 data-aos="fade" data-aos-offset="300" data-aos-duration="2000" data-aos-easing="ease-in-out-sine"
+                data-aos-mirror="false" data-aos-once="true">{KID}</h2>
+            <p>嗨，我是一位開發者，主要開發遊戲、網頁，也會創作插畫。 </p>
+            <a href="" class="button-box">關於我</a>
+        </section>
+        <!-- 作品集 -->
+        <section id="works">
+            <h1 class="title" data-aos="slide-right" data-aos-duration="1000" data-aos-offset="200"
+                data-aos-once="true">作品集
+            </h1>
+            <div id="work-box">
+                <div class="work-box-small" data-aos="zoom-in" data-aos-offset="350" data-aos-duration="1000"
+                    data-aos-once="true">
+                    <img src="" alt="">
+                    <span>類別</span>
+                    <h2>作品名稱</h2>
+                </div>
+                <div class="work-box-small" data-aos="zoom-in" data-aos-offset="350" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-delay="200">
+                    <img src="" alt="">
+                    <span>類別</span>
+                    <h2>作品名稱</h2>
+                </div>
+                <div class="work-box-small" data-aos="zoom-in" data-aos-offset="350" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-delay="400">
+                    <img src="" alt="">
+                    <span>類別</span>
+                    <h2>作品名稱</h2>
+                </div>
+                <div class="work-box-small" data-aos="zoom-in" data-aos-offset="350" data-aos-duration="1000"
+                    data-aos-once="true">
+                    <img src="" alt="">
+                    <span>類別</span>
+                    <h2>作品名稱</h2>
+                </div>
+                <div class="work-box-small" data-aos="zoom-in" data-aos-offset="350" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-delay="200">
+                    <img src="" alt="">
+                    <span>類別</span>
+                    <h2>作品名稱</h2>
+                </div>
+                <div class="work-box-small" data-aos="zoom-in" data-aos-offset="350" data-aos-duration="1000"
+                    data-aos-once="true" data-aos-delay="400">
+                    <img src="" alt="">
+                    <span>類別</span>
+                    <h2>作品名稱</h2>
+                </div>
             </div>
-            <div class="work-box-small">
-                <img src="" alt="">
-                <span>類別</span>
-                <h2>作品名稱</h2>
+            <div class="button-div">
+                <a href="" class="button-box">作品集</a>
             </div>
-            <div class="work-box-small">
-                <img src="" alt="">
-                <span>類別</span>
-                <h2>作品名稱</h2>
+        </section>
+        <!-- 頁尾 -->
+        <footer>
+            <div>
+                <a href="./index.html" class="logo" data-aos="fade-down" data-aos-duration="1000"
+                    data-aos-once="true">{KID}</a>
             </div>
-            <div class="work-box-small">
-                <img src="" alt="">
-                <span>類別</span>
-                <h2>作品名稱</h2>
+            <div class="social">
+                <a href=""><img src="./img/icon-youtube.png" alt="YOUTUBE"></a>
+                <a href=""><img src="./img/icon-github.png" alt="Git Hub"></a>
+                <a href=""><img src="./img/icon-facebook.png" alt="Facebook"></a>
+                <a href=""><img src="./img/icon-email.png" alt="E-Mail"></a>
             </div>
-            <div class="work-box-small">
-                <img src="" alt="">
-                <span>類別</span>
-                <h2>作品名稱</h2>
+            <div class="link">
+                <a href="">關於我</a>
+                <a href="">作品集</a>
+                <a href="">聯絡我</a>
             </div>
-            <div class="work-box-small">
-                <img src="" alt="">
-                <span>類別</span>
-                <h2>作品名稱</h2>
+            <div id="copyright">
+                Copyright &copy; 2010 - 2020 <span class="logo-small">{KID}</span> All rights reserved
             </div>
-        </div>
-        <div class="button-div">
-            <a href="" class="button-box">作品集</a>
-        </div>
-    </section>
-
-    <!-- 頁尾 -->
-    <footer>
-        <div>
-            <a href="./index.html" class="logo">{KID}</a>
-        </div>
-        <div class="social">
-            <a href=""><img src="./img/yt-icon.png" alt="YOUTUBE"></a>
-            <a href=""><img src="./img/github-icon.png" alt="Git Hub"></a>
-            <a href=""><img src="./img/fb-icon.png" alt="Facebook"></a>
-            <a href=""><img src="./img/email-icon.png" alt="E-Mail"></a>
-        </div>
-        <div class="link">
-            <a href="">關於我</a>
-            <a href="">作品集</a>
-            <a href="">聯絡我</a>
-        </div>
-        <div id="copyright">
-            Copyright &copy; 2010 - 2020 <span class="logo-small">{KID}</span> All rights reserved
-        </div>
-    </footer>
-</body>
+        </footer>
+        <!-- 返回頂端按鈕 -->
+        <img src="./img/arrow.png" alt="返回頂端" id="arrow" data-gte-target="top" data-aos-offset="0">
+        <!-- 前往指定元素 CDN -->
+        <script src="https://kid421.github.io/Web_JavaScript_GoToElement/goToElement.js"></script>
+        <!--  jQuery CDN  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--  Slick CDN  -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            $("#banner").slick({
+                arrows: false,
+                dots: true,
+                dotsClass: "slick-dots dots"
+            });
+        </script>
+        <!-- AOS CDN -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
 
 </html>
